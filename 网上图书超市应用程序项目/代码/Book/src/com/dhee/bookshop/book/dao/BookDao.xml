@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dhee.bookshop.book.dao.BookDao">
+
+	<select id="selAll" parameterType="int" resultType="Book">
+		SELECT * FROM BOOK
+	</select>
+
+	<select id="selByCID" parameterType="catelog" resultType="Book">
+		SELECT * FROM BOOK WHERE CID=#{cid}
+	</select>
+	
+	<select id="detail" parameterType="Book" resultType="Book">
+		SELECT * FROM BOOK WHERE BID=#{bid}
+	</select>
+	 
+<!-- 	<select id="selByBname" parameterType="Book" resultType="Book"> -->
+<!-- 		SELECT * FROM BOOK WHERE BID=#{bname} -->
+<!-- 	</select> -->
+
+<!-- 	<select id="selID" parameterType="Book" resultType="int"> -->
+<!-- 		SELECT CID FROM BOOK WHERE BNAME=#{bname} -->
+<!-- 	</select> -->
+
+	<insert id="addBook" parameterType="Book">
+		INSERT INTO BOOK(BID,BOOKISBN,BNAME,WRITER,CID,PUBLISH,PDATE,IMGPATH,PRICE,ISCOMMAND,ISNEW,DEMO)
+		VALUES(BOOK_BID.NEXTVAL,#{bookisbn,jdbcType=VARCHAR},#{bname,jdbcType=VARCHAR},#{writer,jdbcType=VARCHAR},#{cid,jdbcType=VARCHAR},#{publish,jdbcType=VARCHAR},#{pdate,jdbcType=VARCHAR},#{imgpath,jdbcType=VARCHAR},#{price,jdbcType=VARCHAR},#{iscommand,jdbcType=VARCHAR},#{isnew,jdbcType=VARCHAR},#{demo,jdbcType=VARCHAR})
+	</insert>
+	
+	<delete id="delBook" parameterType="Book">
+		DELETE FROM BOOK WHERE BID=#{bid}
+	</delete>
+
+	<update id="altBook" parameterType="Book"> 
+		UPDATE BOOK SET BOOKISBN=#{bookisbn,jdbcType=VARCHAR},BNAME=#{bname,jdbcType=VARCHAR},WRITER=#{writer,jdbcType=VARCHAR},CID=#{cid,jdbcType=VARCHAR},PUBLISH=#{publish,jdbcType=VARCHAR},PDATE=#{pdate,jdbcType=VARCHAR},IMGPATH=#{imgpath,jdbcType=VARCHAR},PRICE=#{price,jdbcType=VARCHAR},ISCOMMAND=#{iscommand,jdbcType=VARCHAR},ISNEW=#{isnew,jdbcType=VARCHAR},DEMO=#{demo,jdbcType=VARCHAR}
+		WHERE BID=#{bid}
+	</update>
+	
+	<select id="selAllPage" parameterType="int" resultType="Book">
+		SELECT * FROM
+		(SELECT ROWNUM N,BOOK.* FROM BOOK)
+		WHERE N BETWEEN #{start} AND #{start}+4
+	</select>
+	
+	<select id="countBook" resultType="int">
+		SELECT COUNT(*) FROM BOOK
+	</select>
+	
+</mapper>

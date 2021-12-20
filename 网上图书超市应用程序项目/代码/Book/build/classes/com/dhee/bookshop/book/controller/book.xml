@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="index" extends="struts-default"
+		namespace="/index">
+		
+		<action name="bookCatelog"
+			class="com.dhee.bookshop.book.controller.BookController"
+			method="bookCatelog">
+			<result>/index/bookcatelog.jsp</result>
+		</action>
+		
+		<action name="index"
+			class="com.dhee.bookshop.book.controller.BookController"
+			method="index">
+			<result>/index/index.jsp</result>
+		</action>
+		
+		<action name="indexdetail"
+			class="com.dhee.bookshop.book.controller.BookOperationController"
+			method="bookdetail">
+			<result>/index/indexdetail.jsp</result>
+		</action>
+		
+	</package>
+	
+	<package name="book" extends="struts-default"
+		namespace="/book">
+		
+		<action name="book"
+			class="com.dhee.bookshop.book.controller.BookController"
+			method="book">
+			<result>/manager/book/book.jsp</result>
+		</action>
+		
+		<action name="addreflection"
+			class="com.dhee.bookshop.book.controller.BookOperationController"
+			method="addreflection">
+			<result>/manager/book/addbook.jsp</result>
+		</action>
+		
+		<action name="addbook"  
+		class="com.dhee.bookshop.book.controller.BookOperationController" 
+		method="addbook"> 
+            <result name="success" type="redirectAction">  
+                <param name="actionName">book</param>  
+                <param name="namespace"></param>
+                <param name="result">${result}</param>
+            </result>  
+       </action> 
+		
+		<action name="delbook"  
+		class="com.dhee.bookshop.book.controller.BookOperationController" 
+		method="delbook">  
+            <result name="success" type="redirectAction">  
+                <param name="actionName">book</param>  
+                <param name="namespace"></param>
+                <param name="result">${result}</param>
+            </result>  
+       </action> 
+       
+       <action name="altreflection"
+			class="com.dhee.bookshop.book.controller.BookOperationController"
+			method="altreflection">
+			<result>/manager/book/altbook.jsp</result>
+		</action>
+		
+		<action name="altbook"  
+		class="com.dhee.bookshop.book.controller.BookOperationController" 
+		method="altbook">  
+<!-- 				<result>/manager/book/NewFile.jsp</result> -->
+            <result name="success" type="redirectAction">  
+                <param name="actionName">book</param>  
+                <param name="namespace"></param>
+                <param name="result">${result}</param>
+            </result>  
+       </action>  
+       
+       <action name="bookdetail"  
+		class="com.dhee.bookshop.book.controller.BookOperationController" 
+		method="bookdetail">  
+            <result>/manager/book/bookdetail.jsp</result>  
+       </action>
+		
+	</package>
+
+</struts>   

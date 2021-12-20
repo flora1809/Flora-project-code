@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="admin" extends="struts-default"
+		namespace="/admin">
+		
+		<action name="loginreflection"
+			class="com.dhee.bookshop.manager.admin.controller.AdminController"
+			method="loginreflection">
+			<result name="success">/manager/login/login.jsp</result>
+		</action>
+		
+		<action name="login"
+			class="com.dhee.bookshop.manager.admin.controller.AdminController"
+			method="login">
+			<result name="success">/manager/login/result.jsp</result>
+			<result name="error">/manager/login/login.jsp</result>
+		</action>
+		
+	</package>
+
+</struts>   

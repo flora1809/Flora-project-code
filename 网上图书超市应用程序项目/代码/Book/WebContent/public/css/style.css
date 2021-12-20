@@ -1,0 +1,75 @@
+TD {
+	FONT-SIZE: 9pt; COLOR: #000000
+}
+A:hover {
+	FONT-SIZE: 9pt; COLOR: #ff6600
+}
+A {
+	FONT-SIZE: 9pt; COLOR: #676767; TEXT-DECORATION: none
+}
+IMG {
+	BORDER-RIGHT: 0px; BORDER-TOP: 0px; BORDER-LEFT: 0px; BORDER-BOTTOM: 0px
+}
+.blue {
+	FONT-SIZE: 9pt; COLOR: #034683
+}
+.bgcolor {
+	FONT-SIZE: 9pt; COLOR: #1980db
+}
+.btn_grey {
+	BORDER-RIGHT: #666666 1px solid; PADDING-RIGHT: 1px; BORDER-TOP: #ffffff 1px solid; PADDING-LEFT: 1px; FONT-SIZE: 9pt; PADDING-BOTTOM: 1px; BORDER-LEFT: #ffffff 1px solid; CURSOR: hand; COLOR: #333333; PADDING-TOP: 1px; BORDER-BOTTOM: #666666 1px solid; FONT-FAMILY: "ËÎÌו"; HEIGHT: 19px; BACKGROUND-COLOR: #eeeeee
+}
+INPUT {
+	BORDER-RIGHT: #999999 1px solid; BORDER-TOP: #999999 1px solid; FONT-SIZE: 9pt; BORDER-LEFT: #999999 1px solid; COLOR: #333333; BORDER-BOTTOM: #999999 1px solid; FONT-FAMILY: "ËÎÌו"
+}
+.word_grey {
+	COLOR: #333333
+}
+.word_deepgrey {
+	COLOR: #999999
+}
+.word_orange {
+	COLOR: #ff6600
+}
+.word_blue {
+	COLOR: #123f73
+}
+.word_white {
+	COLOR: #ffffff
+}
+.word_gray {
+	COLOR: #dddddd
+}
+BODY {
+	BACKGROUND-IMAGE: url(../images/bg.gif); MARGIN: 0px
+}
+.textarea {
+	BORDER-RIGHT: #999999 1px solid; BORDER-TOP: #999999 1px solid; FONT-SIZE: 9pt; BORDER-LEFT: #999999 1px solid; COLOR: #333333; BORDER-BOTTOM: #999999 1px solid; FONT-FAMILY: "ËÎÌו"
+}
+.shadow {
+	FONT-SIZE: 13pt; FILTER: DropShadow(Color=#111111,offX=1,offY=0,positive=1); COLOR: #ff9900; HEIGHT: 10px
+}
+.tableBorder_B {
+	PADDING-RIGHT: 5px; PADDING-LEFT: 5px; PADDING-BOTTOM: 5px; PADDING-TOP: 5px; BORDER-BOTTOM: #aaaaaa 1px solid
+}
+.tableBorder_B1 {
+	BORDER-BOTTOM: #cccccc 1px dotted
+}
+.tableBorder_LTR {
+	BORDER-RIGHT: #aaaaaa 1px solid; PADDING-RIGHT: 5px; BORDER-TOP: #aaaaaa 1px solid; PADDING-LEFT: 5px; PADDING-BOTTOM: 5px; BORDER-LEFT: #aaaaaa 1px solid; PADDING-TOP: 5px
+}
+.tableBorder_LBR {
+	BORDER-RIGHT: #aaaaaa 1px solid; PADDING-RIGHT: 5px; PADDING-LEFT: 5px; PADDING-BOTTOM: 5px; BORDER-LEFT: #aaaaaa 1px solid; PADDING-TOP: 5px; BORDER-BOTTOM: #aaaaaa 1px solid
+}
+.tableBorder_L {
+	PADDING-RIGHT: 5px; PADDING-LEFT: 5px; PADDING-BOTTOM: 5px; BORDER-LEFT: #aaaaaa 1px solid; PADDING-TOP: 5px
+}
+.tableBorder {
+	BORDER-RIGHT: #aaaaaa 1px solid; BORDER-TOP: #aaaaaa 1px solid; BORDER-LEFT: #aaaaaa 1px solid; BORDER-BOTTOM: #aaaaaa 1px solid
+}
+.noborder {
+	BORDER-TOP-STYLE: none; BORDER-RIGHT-STYLE: none; BORDER-LEFT-STYLE: none; BORDER-BOTTOM-STYLE: none
+}
+.hidden_a_line {
+	
+}

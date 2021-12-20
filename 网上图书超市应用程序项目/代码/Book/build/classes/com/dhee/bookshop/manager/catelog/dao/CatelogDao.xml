@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dhee.bookshop.manager.catelog.dao.CatelogDao">
+
+
+	<select id="selID" parameterType="catelog" resultType="catelog">
+		SELECT * FROM CATELOG WHERE CID=#{cid}
+	</select>
+	
+	<select id="selByName" parameterType="catelog" resultType="catelog">
+		SELECT * FROM CATELOG WHERE CNAME=#{cname}
+	</select>
+
+	<insert id="addCatelog" parameterType="catelog">
+		INSERT INTO CATELOG(CID,CNAME)VALUES(CATELOG_CID.NEXTVAL,#{cname})
+	</insert>
+	
+	<delete id="delCatelog" parameterType="catelog">
+		DELETE FROM CATELOG WHERE CID=#{cid}
+	</delete>
+	
+	<select id="selAll" resultType="catelog">
+		SELECT * FROM CATELOG
+	</select>
+	
+	<select id="selAllPage" parameterType="int" resultType="catelog">
+		SELECT * FROM
+		(SELECT ROWNUM N,CATELOG.* FROM CATELOG)
+		WHERE N BETWEEN #{start} AND #{start}+4
+	</select>
+	
+	<select id="countCatelog" resultType="int">
+		SELECT COUNT(*) FROM CATELOG
+	</select>
+	
+</mapper>
